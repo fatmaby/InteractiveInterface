@@ -1,0 +1,29 @@
+{
+  "name": "interactive-interface",
+  "version": "0.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SwatMedtech/InteractiveInterface.git"
+  },
+  "author": "SwatMedtech",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SwatMedtech/InteractiveInterface/issues"
+  },"dependencies":{
+  "express":"*",
+  "mongoose":"*",
+  "bcryptjs":"*",
+  "cors":"*",
+  "jsonwebtoken":"*",
+  "body-parser":"*",
+  "passport":"*",
+  "passport-jwt":"*"
+},
+  "homepage": "https://github.com/SwatMedtech/InteractiveInterface#readme"
+}
