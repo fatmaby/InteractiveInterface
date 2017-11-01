@@ -3,4 +3,5 @@
 <hr>
 <flash-messages></flash-messages>
 <router-outlet></router-outlet>
-<app-footer></app-footer>
+<app-footer *ngIf="authService.loggedIn() && !authService.role()==='admin'"></app-footer>
+

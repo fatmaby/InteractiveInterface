@@ -23,14 +23,14 @@
             <li><a href="#">Electronics Lab</a></li>
           </ul>
         </li>
-        <li *ngIf="authService.loggedIn() && authService.role()==='admin'"><a href="#dashboard">Dashboard</a></li>
+        <li *ngIf="authService.loggedIn() && authService.role()==='admin'"><a [routerLink]="['/dashboard']">Dashboard</a></li>
 
 
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <div class="navbar-form">
           <li *ngIf="!authService.loggedIn()"><a (click)="navigate()" [routerLink]="['/login']" [routerLinkActiveOptions] = "{exact:true}"[routerLinkActive]="['active']" class="btn btn-primary btn-md">Login <i class="fa fa-sign-in"></i></a></li>
-          <li *ngIf="authService.loggedIn()"><button class="btn btn-primary btn-md" (click)="authService.logout()">Logout <i class="fa fa-sign-in"></i></button></li>
+          <li *ngIf="authService.loggedIn()"><button class="btn btn-primary btn-md" (click)="logout()">Logout <i class="fa fa-sign-in"></i></button></li>
         </div>
       </ul>
     </div>

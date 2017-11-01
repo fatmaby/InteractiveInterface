@@ -1,0 +1,39 @@
+<div class="nav-side-menu">
+  <div class="brand">Brand Logo</div>
+  <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+
+  <div class="menu-list">
+
+    <ul id="menu-content" class="menu-content collapse out">
+      <li>
+        <a href="#">
+          <i class="fa fa-dashboard fa-lg"></i>Dashboard
+        </a>
+      </li>
+
+      <li  data-toggle="collapse" data-target="#products" class="collapsed active">
+        <a routerLink="/" routerLinkActive="active"><i class="fa fa-home fa-lg"></i> Home </a>
+      </li>
+
+
+      <li data-toggle="collapse" data-target="#service" class="collapsed">
+        <a routerLink="/dashboard/LabCourses" routerLinkActive="active"><i class="fa fa-globe fa-lg"></i> Lab Courses </a>
+      </li>
+
+      <li data-toggle="collapse" data-target="#new" class="collapsed">
+        <a routerLink="/dashboard/Experiments" routerLinkActive="active"><i class="fa fa-flask fa-lg"></i> Experiments </a>
+      </li>
+      <li>
+        <a routerLink="/dashboard/Prelabs" routerLinkActive="active">
+          <i class="fa fa-wpforms fa-lg"></i>Prelabs
+        </a>
+      </li>
+
+      <li>
+        <a routerLink="/dashboard/Tutorials" routerLinkActive="active">
+          <i class="fa fa-video-camera fa-lg"></i> Tutorials
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

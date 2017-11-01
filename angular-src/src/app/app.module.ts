@@ -13,11 +13,24 @@ import {AuthGuard} from './guards/auth.guard';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
+import { LabReportsComponent } from './lab-reports/lab-reports.component';
+import { PrelabsComponent } from './prelabs/prelabs.component';
+import { TutorialsComponent } from './tutorials/tutorials.component';
+import { ExperimentComponent } from './experiment/experiment.component';
 
 const appRoutes: Routes =  [
   {path:'', component: HomeComponent},
   {path:'login', component: LoginComponent},
-  {path:'dashboard', component: DashboardComponent, canActivate:[AuthGuard]},
+  {path:'dashboard', component: DashboardComponent, canActivate:[AuthGuard],
+    children:[
+      {path:'LabCourses', component:LabReportsComponent},
+      {path:'Prelabs', component:PrelabsComponent},
+      {path:'Tutorials', component:TutorialsComponent},
+      {path:'Experiments', component:ExperimentComponent},
+    ]
+  },
+  {path:'*', component: HomeComponent},
 ]
 
 @NgModule({
@@ -27,7 +40,12 @@ const appRoutes: Routes =  [
     LoginComponent,
     HomeComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    SidenavComponent,
+    LabReportsComponent,
+    PrelabsComponent,
+    TutorialsComponent,
+    ExperimentComponent
   ],
   imports: [
     BrowserModule,
