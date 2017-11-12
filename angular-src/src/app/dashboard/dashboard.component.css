@@ -1,0 +1,8 @@
+.main-view {
+  position: absolute;
+  left: 300px; /* sidenav width since it has a fixed width. */
+  right: 0;
+  /* force container class padding */
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}

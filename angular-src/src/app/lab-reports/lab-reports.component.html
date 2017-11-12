@@ -119,4 +119,14 @@
     </tr>
     </tbody>
   </table>
+  <button class="btn btn-primary pull-right" (click)="modal.open()">Add</button>
+  <bs-modal #modal>
+    <bs-modal-header [showDismiss]="true">
+      <h4 class="modal-title">I'm a modal!</h4>
+    </bs-modal-header>
+    <bs-modal-body>
+      Hello World!
+    </bs-modal-body>
+    <bs-modal-footer [showDefaultButtons]="true"></bs-modal-footer>
+  </bs-modal>
 </div>

@@ -18,6 +18,7 @@ import { LabReportsComponent } from './lab-reports/lab-reports.component';
 import { PrelabsComponent } from './prelabs/prelabs.component';
 import { TutorialsComponent } from './tutorials/tutorials.component';
 import { ExperimentComponent } from './experiment/experiment.component';
+import {BsModalModule} from 'ng2-bs3-modal';
 
 const appRoutes: Routes =  [
   {path:'', component: HomeComponent},
@@ -52,6 +53,7 @@ const appRoutes: Routes =  [
     RouterModule.forRoot(appRoutes),
     HttpModule,
     FormsModule,
+    BsModalModule,
     FlashMessagesModule
   ],
   providers: [AuthService, AuthGuard],
