@@ -119,4 +119,19 @@
     </tr>
     </tbody>
   </table>
+  <button class="btn btn-primary pull-right" (click)="modal.open()">Add</button>
+  <bs-modal #modal>
+    <bs-modal-header [showDismiss]="true">
+      <h4 class="modal-title"><b> Add prelab</b></h4>
+    </bs-modal-header>
+    <bs-modal-body>
+      <app-tinyeditor
+        [elementId]="'my-editor-id'"
+        (onEditorKeyup)="keyupHandlerFunction($event)"
+      >
+
+      </app-tinyeditor>
+    </bs-modal-body>
+    <bs-modal-footer [showDefaultButtons]="true"></bs-modal-footer>
+  </bs-modal>
 </div>

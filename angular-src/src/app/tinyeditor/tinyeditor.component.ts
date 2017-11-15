@@ -33,6 +33,7 @@ export class TinyeditorComponent implements OnInit, AfterViewInit, OnDestroy {
           this.onEditorKeyup.emit(content);
         });
       },
+      height : "400"
     });
   }
 
