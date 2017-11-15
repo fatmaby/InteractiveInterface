@@ -6,10 +6,10 @@ import { FormsModule } from '@angular/forms';
 import {FlashMessagesModule} from 'angular2-flash-messages';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import {AuthService} from './services/auth.service';
+import { AuthService } from './services/auth.service';
 import { LoginComponent } from './login/login.component';
-import {HttpModule} from "@angular/http";
-import {AuthGuard} from './guards/auth.guard';
+import { HttpModule } from "@angular/http";
+import { AuthGuard } from './guards/auth.guard';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
@@ -18,12 +18,13 @@ import { LabReportsComponent } from './lab-reports/lab-reports.component';
 import { PrelabsComponent } from './prelabs/prelabs.component';
 import { TutorialsComponent } from './tutorials/tutorials.component';
 import { ExperimentComponent } from './experiment/experiment.component';
-import {BsModalModule} from 'ng2-bs3-modal';
+import { TinyeditorComponent } from './tinyeditor/tinyeditor.component';
+import { BsModalModule } from 'ng2-bs3-modal';
 
 const appRoutes: Routes =  [
   {path:'', component: HomeComponent},
   {path:'login', component: LoginComponent},
-  {path:'dashboard', component: DashboardComponent, canActivate:[AuthGuard],
+  {path:'dashboard', component: DashboardComponent, /* canActivate:[AuthGuard], */
     children:[
       {path:'LabCourses', component:LabReportsComponent},
       {path:'Prelabs', component:PrelabsComponent},
@@ -46,7 +47,8 @@ const appRoutes: Routes =  [
     LabReportsComponent,
     PrelabsComponent,
     TutorialsComponent,
-    ExperimentComponent
+    ExperimentComponent,
+    TinyeditorComponent
   ],
   imports: [
     BrowserModule,
