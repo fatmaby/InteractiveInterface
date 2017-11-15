@@ -24,7 +24,7 @@ import { BsModalModule } from 'ng2-bs3-modal';
 const appRoutes: Routes =  [
   {path:'', component: HomeComponent},
   {path:'login', component: LoginComponent},
-  {path:'dashboard', component: DashboardComponent, /* canActivate:[AuthGuard], */
+  {path:'dashboard', component: DashboardComponent, canActivate:[AuthGuard],
     children:[
       {path:'LabCourses', component:LabReportsComponent},
       {path:'Prelabs', component:PrelabsComponent},
